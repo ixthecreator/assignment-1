@@ -1,0 +1,157 @@
+* {
+  box-sizing: border-box;
+}
+
+/* page width, background, and main font used. */
+body {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 28px;
+  background: #f4f2ed;
+  color: #252525;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+
+a {
+  color: #962e2b;
+  text-underline-offset: 4px;
+}
+
+a:hover {
+  text-decoration-thickness: 2px;
+}
+
+a:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 5px;
+}
+
+.skip-link {
+  position: absolute;
+  top: -100px;
+  padding: 8px 16px;
+  background: white;
+}
+
+.skip-link:focus {
+  top: 8px;
+}
+
+header {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #c6c2b9;
+}
+
+.project-title,
+h2,
+.image-number {
+  font-family: "Courier New", Courier, monospace;
+}
+
+.project-title {
+  font-size: 0.85rem;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+}
+
+nav [aria-current="page"] {
+  font-weight: bold;
+  text-decoration-thickness: 3px;
+}
+
+h1 {
+  margin: 32px 0 36px;
+  font-size: clamp(2.5rem, 8vw, 5rem);
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+}
+
+h2 {
+  font-size: 1rem;
+}
+
+/* the space between boxes and the minimum height of it. */
+.collage-grid {
+  display: grid;
+  gap: 12px;
+  grid-auto-rows: minmax(120px, auto);
+}
+
+/* Box color and dashed edges; The element Flex keeps the number above the caption. */
+.placeholder {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 0;
+  margin: 0;
+  padding: 16px;
+  border: 1px dashed #938d81;
+  background: #e7e3da;
+}
+
+.image-number {
+  color: #962e2b;
+  font-size: 1.25rem;
+}
+
+figcaption {
+  font-size: 0.875rem;
+  overflow-wrap: anywhere;
+}
+
+/* Face has four columns. The first box takes up two columns and two rows. */
+.face-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.face-grid .placeholder:first-child {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.face-grid .placeholder:last-child {
+  grid-column: 1 / -1;
+}
+
+/* Nodes keeps all ten boxes the same size, but having five across. */
+.nodes-grid {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-auto-rows: minmax(180px, auto);
+}
+
+/* Mismatch has three columns, with the first box stretched across them. */
+.mismatch-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.mismatch-grid .placeholder:first-child {
+  grid-column: 1 / -1;
+}
+
+footer {
+  margin-top: 36px;
+  padding-top: 16px;
+  border-top: 1px solid #c6c2b9;
+  color: #5b5750;
+  font-size: 0.875rem;
+}
+
+@media (max-width: 640px) {
+  body {
+    padding: 20px;
+  }
+
+  .collage-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-auto-rows: minmax(120px, auto);
+  }
+
+  .face-grid .placeholder:first-child {
+    grid-row: auto;
+  }
+}
