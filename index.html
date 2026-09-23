@@ -1,76 +1,329 @@
 <!doctype html>
-<html lang="en">
+<html>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Face — A Face Is a Link</title>
+    <title>A borrowed bridge. - New York</title>
     <link rel="stylesheet" href="styles.css" />
+
+    <!-- relate to the game script -->
+    <script type="module" src="game.js?v=minimal-1"></script>
+
   </head>
-  <body>
-    <a class="skip-link" href="#main">Skip to content</a>
-    <header>
-      <p class="project-title">A Face Is a Link / Assignment 1</p>
-      <nav aria-label="Collage pages">
-        <a href="index.html" aria-current="page">01 Face</a>
-        <a href="nodes.html">02 Nodes</a>
-        <a href="mismatch.html">03 Mismatch</a>
+  <body
+    data-page="reach"
+    data-storage-key="contour-passages.nyc.bridge.v1.reach"
+  >
+    <header class="site-header">
+      <h1 id="title">A borrowed bridge.</h1>
+      <nav>
+        <a href="../contour-passages/index.html?v=minimal-1" class="current"
+          >纽约</a>
       </nav>
     </header>
 
-    <main id="main">
-      <!-- the heading on the page. -->
-      <h1>Face</h1>
-
-      <section aria-labelledby="images-heading">
-        <h2 id="images-heading">Image plan</h2>
-        <!-- the image spots -->
-        <div class="collage-grid face-grid">
-          <figure class="placeholder">
-            <span class="image-number">01</span>
-            <figcaption>Self-portrait</figcaption>
+    <main>
+      <div class="art-scroll" id="artwork">
+        <section
+          class="collage"
+          style="
+            --ratio: 1536/768;
+            --columns: 30fr 130fr 110fr 160fr 180fr 220fr 125fr 160fr 140fr
+              100fr 150fr 31fr;
+            --rows: 148fr 18fr 29fr 14fr 59fr 78fr 35fr 3fr 12fr 4fr 8fr 2fr
+              75fr 46fr 11fr 26fr 2fr 3fr 3fr 192fr;
+          "
+        >
+          <figure
+            class="fragment"
+            data-photo="wood"
+            data-source="nyc-06"
+            style="
+              grid-column: 2/3;
+              grid-row: 9/18;
+              --fw: 130;
+              --fh: 186;
+              --order: 1;
+            "
+          >
+            <div class="photo">
+              <span class="exposure"
+                ><img
+                  class="real-photo"
+                  src="assets/nyc/nyc-06.jpg"
+                  width="1920"
+                  height="1171"
+                  draggable="false"
+                  style="
+                    width: 274.28571429%;
+                    height: 117.1%;
+                    left: -50%;
+                    top: -10%;
+                  "
+              /></span>
+            </div>
           </figure>
-          <figure class="placeholder">
-            <span class="image-number">02</span>
-            <figcaption>Left eye</figcaption>
+          <figure
+            class="fragment"
+            data-photo="stone"
+            data-source="nyc-10"
+            style="
+              grid-column: 3/4;
+              grid-row: 13/14;
+              --fw: 110;
+              --fh: 75;
+              --order: 2;
+            "
+          >
+            <div class="photo">
+              <span class="exposure"
+                ><img
+                  class="real-photo"
+                  src="assets/nyc/nyc-10.jpg"
+                  width="1920"
+                  height="341"
+                  draggable="false"
+                  style="width: 384%; height: 100%; left: -80%; top: 0%"
+              /></span>
+            </div>
           </figure>
-          <figure class="placeholder">
-            <span class="image-number">03</span>
-            <figcaption>Right eye</figcaption>
+          <figure
+            class="fragment"
+            data-photo="relief"
+            data-source="nyc-13"
+            style="
+              grid-column: 4/5;
+              grid-row: 6/16;
+              --fw: 160;
+              --fh: 274;
+              --order: 3;
+            "
+          >
+            <div class="photo">
+              <span class="exposure"
+                ><img
+                  class="real-photo"
+                  src="assets/nyc/nyc-13-view.svg"
+                  width="1920"
+                  height="1440"
+                  draggable="false"
+                  style="width: 100%; height: 100%; left: 0; top: 0"
+              /></span>
+            </div>
           </figure>
-          <figure class="placeholder">
-            <span class="image-number">04</span>
-            <figcaption>Nose</figcaption>
+          <figure
+            class="fragment"
+            data-photo="approach"
+            data-source="nyc-02"
+            style="
+              grid-column: 5/6;
+              grid-row: 2/10;
+              --fw: 180;
+              --fh: 248;
+              --order: 4;
+            "
+          >
+            <button
+              class="photo movable"
+              data-piece="approach"
+              data-axis="y"
+              data-start="48"
+              disabled
+            >
+              <span class="exposure"
+                ><img
+                  class="real-photo"
+                  src="assets/nyc/nyc-02.jpg"
+                  width="1920"
+                  height="1280"
+                  draggable="false"
+                  style="
+                    width: 240%;
+                    height: 116.36363636%;
+                    left: -81.25%;
+                    top: -13.63636364%;
+                  "
+              /></span>
+            </button>
           </figure>
-          <figure class="placeholder">
-            <span class="image-number">05</span>
-            <figcaption>Mouth</figcaption>
+          <figure
+            class="fragment"
+            data-photo="arch"
+            data-source="nyc-04"
+            style="
+              grid-column: 6/7;
+              grid-row: 3/12;
+              --fw: 220;
+              --fh: 242;
+              --order: 5;
+            "
+          >
+            <div class="photo">
+              <span class="exposure"
+                ><img
+                  class="real-photo"
+                  src="assets/nyc/nyc-04.jpg"
+                  width="1920"
+                  height="1282"
+                  draggable="false"
+                  style="
+                    width: 192%;
+                    height: 116.54545455%;
+                    left: -70%;
+                    top: -9.09090909%;
+                  "
+              /></span>
+            </div>
           </figure>
-          <figure class="placeholder">
-            <span class="image-number">06</span>
-            <figcaption>Face silhouette</figcaption>
+          <figure
+            class="fragment"
+            data-photo="log"
+            data-source="nyc-07"
+            style="
+              grid-column: 7/8;
+              grid-row: 5/8;
+              --fw: 125;
+              --fh: 172;
+              --order: 6;
+            "
+          >
+            <div class="photo">
+              <span class="exposure"
+                ><img
+                  class="real-photo"
+                  src="assets/nyc/nyc-07.jpg"
+                  width="1920"
+                  height="1229"
+                  draggable="false"
+                  style="
+                    width: 240%;
+                    height: 111.72727273%;
+                    left: -97.5%;
+                    top: -9.09090909%;
+                  "
+              /></span>
+            </div>
           </figure>
-          <figure class="placeholder">
-            <span class="image-number">07</span>
-            <figcaption>Skin texture</figcaption>
+          <figure
+            class="fragment"
+            data-photo="tower"
+            data-source="nyc-30"
+            style="
+              grid-column: 8/9;
+              grid-row: 4/15;
+              --fw: 160;
+              --fh: 336;
+              --order: 7;
+            "
+          >
+            <button
+              class="photo movable"
+              data-piece="tower"
+              data-axis="y"
+              data-start="-48"
+              disabled
+            >
+              <span class="exposure"
+                ><img
+                  class="real-photo"
+                  src="assets/nyc/nyc-30.jpg"
+                  width="960"
+                  height="1280"
+                  draggable="false"
+                  style="width: 157.37704918%; height: 100%; left: 0%; top: 0%"
+              /></span>
+            </button>
           </figure>
-          <figure class="placeholder">
-            <span class="image-number">08</span>
-            <figcaption>Hand-drawn nodes</figcaption>
+          <figure
+            class="fragment"
+            data-photo="stairs"
+            data-source="nyc-34"
+            style="
+              grid-column: 9/10;
+              grid-row: 7/20;
+              --fw: 140;
+              --fh: 230;
+              --order: 8;
+            "
+          >
+            <div class="photo">
+              <span class="exposure"
+                ><img
+                  class="real-photo"
+                  src="assets/nyc/nyc-34.jpg"
+                  width="1920"
+                  height="1278"
+                  draggable="false"
+                  style="
+                    width: 274.28571429%;
+                    height: 111.13043478%;
+                    left: -50%;
+                    top: -8.69565217%;
+                  "
+              /></span>
+            </div>
           </figure>
-          <figure class="placeholder">
-            <span class="image-number">09</span>
-            <figcaption>Found historical portrait</figcaption>
+          <figure
+            class="fragment"
+            data-photo="escape"
+            data-source="nyc-17"
+            style="
+              grid-column: 10/11;
+              grid-row: 14/17;
+              --fw: 100;
+              --fh: 83;
+              --order: 9;
+            "
+          >
+            <div class="photo">
+              <span class="exposure"
+                ><img
+                  class="real-photo"
+                  src="assets/nyc/nyc-17.jpg"
+                  width="960"
+                  height="1236"
+                  draggable="false"
+                  style="
+                    width: 228.57142857%;
+                    height: 353.14285714%;
+                    left: -59.52380952%;
+                    top: -128.57142857%;
+                  "
+              /></span>
+            </div>
           </figure>
-          <figure class="placeholder">
-            <span class="image-number">10</span>
-            <figcaption>Found facial diagram</figcaption>
+          <figure
+            class="fragment"
+            data-photo="seaside"
+            data-source="nyc-25"
+            style="
+              grid-column: 11/12;
+              grid-row: 11/19;
+              --fw: 150;
+              --fh: 173;
+              --order: 10;
+            "
+          >
+            <button
+              class="photo movable"
+              data-piece="seaside"
+              data-axis="y"
+              data-start="56"
+              disabled
+            >
+              <span class="exposure"
+                ><img
+                  class="real-photo"
+                  src="assets/nyc/nyc-25.jpg"
+                  width="1920"
+                  height="1440"
+                  draggable="false"
+                  style="width: 153.6%; height: 100%; left: -20%; top: 0%"
+              /></span>
+            </button>
           </figure>
-        </div>
-      </section>
+        </section>
+      </div>
     </main>
-
-    <footer>
-      <a href="nodes.html">Continue to Nodes →</a>
-    </footer>
   </body>
 </html>
